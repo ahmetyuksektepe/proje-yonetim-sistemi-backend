@@ -71,7 +71,7 @@ public class UserManager implements UserService {
         }
 
         String token = jwtTokenProvider.generateToken(user);
-        return new AuthResponse(token);
+        return new AuthResponse(token, user.getId(), user.getRole().name());
     }
 
     //bu hem register

@@ -22,7 +22,7 @@ public class UpdateUserRequest {
     //@NotBlank(message = "Telefon boş olamaz")
     private String phone;
 
-    @Email(message = "Geçerli bir mail giriniz")
+    //@Email(message = "Geçerli bir mail giriniz")
     //@NotBlank(message = "Mail boş olamaz")
     private String mail;
 
