@@ -50,6 +50,14 @@ Bu projede Java + Spring Boot kullanılmıştır. Giriş işlemi için JWT token
 
 Arayüzden yapılan kayıtlar default olarak Geliştirici olarak kaydedilir. Sisteme tam erişim için postman üzerinden `PROJECT_MANAGER` yetkisiyle bir kullanıcı oluşturun. Şifrenin 8 haneden uzun olmasına dikkat edin.
 
+| Yetkiler (`role`)      | Açıklama                             |
+| :-------------------- | :----------------------------------- |
+| `PROJECT_MANAGER`                | Her yetkiye tam erişim             |
+| `DEVELOPER`         | Sadece kendi görevinin durumunu ve kendi aktiflik durumunu güncelleyebilme           |
+| `GUEST`        | Gözlemci, mevcut proje ve görevleri gözlemleyebilir |
+
+NOT: Bu yetki kısıtlamaları frontend tarafında kontrol ediliyor. Endpointler için de tanımlanması daha sağlıklı olacaktır.
+
 #### Giriş yap
 
 ```http
